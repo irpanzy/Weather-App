@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, MapPin, Wind, Eye, Droplets, Thermometer, Sunrise, Sunset, Cloud, Sun, CloudRain, CloudSnow, Zap } from 'lucide-react';
+import { Search, MapPin, Wind, Eye, Droplets, Sunrise, Sunset, Cloud, Sun, CloudRain, CloudSnow, Zap } from 'lucide-react';
 
 // Indonesian cities data
 const INDONESIAN_CITIES = [
