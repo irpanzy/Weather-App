@@ -37,12 +37,24 @@ const INDONESIAN_CITIES = [
 
 // Weather code mapping
 const getWeatherIcon = (code, isDay = true) => {
-  if (code === 0) return isDay ? <Sun className="w-8 h-8 text-yellow-500" /> : <Sun className="w-8 h-8 text-yellow-300" />;
-  if (code >= 1 && code <= 3) return <Cloud className="w-8 h-8 text-gray-500" />;
-  if (code === 45 || code === 48) return <Cloud className="w-8 h-8 text-gray-400" />;
-  if (code >= 51 && code <= 67) return <CloudRain className="w-8 h-8 text-blue-500" />;
-  if (code >= 71 && code <= 77) return <CloudSnow className="w-8 h-8 text-blue-300" />;
-  if (code >= 80 && code <= 99) return <Zap className="w-8 h-8 text-purple-500" />;
+  if (code === 0) {
+    return isDay ? <Sun className="w-8 h-8 text-yellow-500" /> : <Sun className="w-8 h-8 text-yellow-300" />;
+  }
+  if (code >= 1 && code <= 3) {
+    return <Cloud className="w-8 h-8 text-gray-500" />;
+  }
+  if (code === 45 || code === 48) {
+    return <Cloud className="w-8 h-8 text-gray-400" />;
+  }
+  if (code >= 51 && code <= 67) {
+    return <CloudRain className="w-8 h-8 text-blue-500" />;
+  }
+  if (code >= 71 && code <= 77) {
+    return <CloudSnow className="w-8 h-8 text-blue-300" />;
+  }
+  if (code >= 80 && code <= 99) {
+    return <Zap className="w-8 h-8 text-purple-500" />;
+  }
   return <Cloud className="w-8 h-8 text-gray-400" />;
 };
 
@@ -142,7 +154,7 @@ const WeatherApp = () => {
   }, []);
 
   const getCurrentHourlyData = () => {
-    if (!hourlyWeather) return [];
+    if (!hourlyWeather) { return []; }
     
     const now = new Date();
     const currentHour = now.getHours();
